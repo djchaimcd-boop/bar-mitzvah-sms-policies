@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Opt-In &amp; Call to Action — Bar Mitzvah Guest List SMS Program</title>
+<meta name="description" content="Documentation of the consent and opt-in flow for the Bar Mitzvah Guest List SMS program operated by Chaim Leshinsky.">
+<style>
+  :root {
+    --ink: #1e2233;
+    --ink-soft: #5c6270;
+    --paper: #faf9f6;
+    --paper-raised: #ffffff;
+    --accent: #2f5c8a;
+    --rule: #ddd9d0;
+    --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "SF Mono", ui-monospace, "Menlo", Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.65; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  .eyebrow { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid var(--rule); padding-bottom: 1rem; margin-bottom: 2.5rem; flex-wrap: wrap; }
+  h1 { font-family: var(--font-display); font-weight: 500; font-size: 2.1rem; line-height: 1.2; margin: 0 0 0.4rem; }
+  .subtitle { color: var(--ink-soft); font-size: 1rem; margin: 0 0 3rem; max-width: 46ch; }
+  h2 { font-family: var(--font-display); font-weight: 500; font-size: 1.25rem; margin: 2.75rem 0 0.75rem; padding-top: 1.75rem; border-top: 1px solid var(--rule); }
+  h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+  p { margin: 0 0 1rem; max-width: 62ch; }
+  ul, ol { margin: 0 0 1rem; padding-left: 1.3rem; max-width: 60ch; }
+  li { margin-bottom: 0.5rem; }
+  strong { font-weight: 600; }
+  .callout { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 3px; padding: 1.1rem 1.3rem; margin: 1.5rem 0; font-size: 0.95rem; }
+  .callout p { margin: 0; } .callout p + p { margin-top: 0.6rem; }
+  .cta-quote { background: var(--paper-raised); border: 1px solid var(--rule); border-left: 3px solid var(--accent); border-radius: 3px; padding: 1.1rem 1.3rem; margin: 1.5rem 0; font-family: var(--font-mono); font-size: 0.9rem; line-height: 1.6; white-space: pre-wrap; }
+  .figure { margin: 1.75rem 0; }
+  .figure figcaption { color: var(--ink-soft); font-size: 0.82rem; margin-top: 0.7rem; max-width: 58ch; }
+  .phone { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 14px; padding: 1.1rem; max-width: 340px; }
+  .phone .hdr { font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); border-bottom: 1px solid var(--rule); padding-bottom: 0.6rem; margin-bottom: 0.9rem; }
+  .bubble { border-radius: 14px; padding: 0.65rem 0.9rem; margin-bottom: 0.6rem; font-size: 0.88rem; line-height: 1.5; max-width: 88%; }
+  .bubble.them { background: #ebe8e1; border-bottom-left-radius: 4px; }
+  .bubble.me { background: var(--accent); color: #fff; margin-left: auto; border-bottom-right-radius: 4px; }
+  .bubble .who { display: block; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.65; margin-bottom: 0.25rem; }
+  .keyword-grid { display: grid; grid-template-columns: auto 1fr; gap: 0.6rem 1rem; margin: 1.5rem 0; font-size: 0.95rem; }
+  .keyword-grid dt { font-family: var(--font-mono); font-weight: 600; color: var(--accent); background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 3px; padding: 0.15rem 0.55rem; width: fit-content; font-size: 0.85rem; }
+  .keyword-grid dd { margin: 0; align-self: center; }
+  .contact-block { display: grid; grid-template-columns: auto 1fr; gap: 0.35rem 1rem; font-size: 0.95rem; margin-top: 0.5rem; }
+  .contact-block dt { color: var(--ink-soft); } .contact-block dd { margin: 0; font-family: var(--font-mono); font-size: 0.88rem; }
+  footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: 0.82rem; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">
+    <span>Bar Mitzvah Guest List SMS Program</span>
+    <span>Effective July 30, 2026</span>
+  </div>
+
+  <h1>Opt-In &amp; Call to Action</h1>
+  <p class="subtitle">How participants consent to receive messages from this program, documented for carrier and campaign review.</p>
+
+  <h2>Program and sender</h2>
+  <dl class="contact-block">
+    <dt>Sender</dt><dd>Chaim Leshinsky (Individual / Sole Proprietor)</dd>
+    <dt>Program name</dt><dd>Bar Mitzvah Guest List</dd>
+    <dt>Program number</dt><dd>(732) 410-4268</dd>
+    <dt>Email</dt><dd>djchaimcd@gmail.com</dd>
+  </dl>
+  <p>This is a personal, non-commercial program. Chaim Leshinsky uses it to collect guest names and mailing addresses from family members and friends so that invitations to one family bar mitzvah can be addressed and mailed.</p>
+
+  <h2>There is one opt-in path, and it is user-initiated</h2>
+  <p>There is <strong>no web form, no checkbox, and no purchased or imported list</strong>. The only way anyone joins is by sending a text message to the program number themselves.</p>
+  <ol>
+    <li>Chaim Leshinsky gives the program number to a family member or friend privately — by personal text message, or in person by word of mouth. The wording used is reproduced in full below.</li>
+    <li>That person decides whether to participate. If they do, <strong>they send the first text message</strong> to (732) 410-4268, typically a guest's name.</li>
+    <li>That inbound message is their consent. The program then replies to confirm what was recorded.</li>
+  </ol>
+  <div class="callout">
+    <p><strong>No phone number is ever messaged unless that number texted the program first.</strong> The system has no ability to send to a number that has not written in, and no numbers are added by the operator by hand.</p>
+  </div>
+
+  <h2>Exact call-to-action wording</h2>
+  <p>This is the verbatim invitation that Chaim Leshinsky sends privately, or reads aloud when inviting someone in person:</p>
+  <div class="cta-quote">Chaim Leshinsky here. Text guest names to 732-410-4268 to add them to the bar mitzvah list. You'll get a reply confirming each name. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.</div>
+
+  <figure class="figure">
+    <div class="phone">
+      <div class="hdr">Illustration — not a photograph</div>
+      <div class="bubble them">
+        <span class="who">Invitation from Chaim Leshinsky</span>
+        Chaim Leshinsky here. Text guest names to 732-410-4268 to add them to the bar mitzvah list. You'll get a reply confirming each name. Msg &amp; data rates may apply. Reply STOP to opt out, HELP for help.
+      </div>
+      <div class="bubble me">
+        <span class="who">Participant texts the program — this is the opt-in</span>
+        Yankel Schwartz, 7 Katie Ct, Lakewood NJ
+      </div>
+      <div class="bubble them">
+        <span class="who">Automated reply from (732) 410-4268</span>
+        Chaim Leshinsky - Bar Mitzvah Guest List: Added #12: Yankel Schwartz. Address saved. Msg &amp; data rates may apply. Reply STOP to opt out.
+      </div>
+    </div>
+    <figcaption>A reproduction of the consent flow, rendered from the program's actual message templates. It is drawn to show the wording and order of messages; it is not a screenshot of a real person's phone, and the name and address shown are fictitious examples.</figcaption>
+  </figure>
+
+  <h2>Message frequency and rates</h2>
+  <p>Message frequency varies and is driven entirely by the participant's own activity: <strong>one reply for each message they send</strong>, plus a totals message when they ask for one. There are no scheduled, recurring, or broadcast messages. <strong>Message and data rates may apply</strong>, depending on the participant's mobile plan.</p>
+
+  <h2>Opting out and getting help</h2>
+  <dl class="keyword-grid">
+    <dt>STOP</dt><dd>Ends participation immediately. The participant receives a single confirmation and then no further messages.</dd>
+    <dt>HELP</dt><dd>Returns instructions along with the sender's name and the contact email djchaimcd@gmail.com.</dd>
+  </dl>
+  <p>Standard opt-out keywords are all honored: STOP, STOPALL, UNSUBSCRIBE, CANCEL, END and QUIT. A participant who has opted out can rejoin by texting START.</p>
+
+  <h2>What is done with the information</h2>
+  <p>Guest names and mailing addresses that participants text in are stored in a private database used only to print address labels for this one event's invitations. Nothing is sold, shared, or used for marketing. Full detail is in the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+
+  <h2>Related documents</h2>
+  <ul>
+    <li><a href="privacy-policy.html">Privacy Policy</a> — https://djchaimcd-boop.github.io/bar-mitzvah-sms-policies/privacy-policy.html</li>
+    <li><a href="terms.html">Terms &amp; Conditions</a> — https://djchaimcd-boop.github.io/bar-mitzvah-sms-policies/terms.html</li>
+  </ul>
+
+  <footer>
+    Published by Chaim Leshinsky (Sole Proprietor) for the Bar Mitzvah Guest List SMS program, (732) 410-4268. Questions: djchaimcd@gmail.com
+  </footer>
+</div>
+</body>
+</html>
